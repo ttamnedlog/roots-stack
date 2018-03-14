@@ -1,7 +1,6 @@
 # roots-stack
-A shell script to automate Trellis, Bedrock, and Sage installation
+A shell script to automate Trellis, Bedrock, and (optionally) Sage installation
 
 ### Quickest/Easiest Way to Utilize
-1. [Go here](https://raw.githubusercontent.com/ttamnedlog/roots-stack/master/roots) and copy the full script to your clipboard.
-2. At a terminal prompt: `pbpaste > roots`
-3. Execute the script: `sh roots`
+1. Download just the script: `$ curl -o roots https://raw.githubusercontent.com/ttamnedlog/roots-stack/master/roots`
+2. Execute the script: `$ sh roots`
