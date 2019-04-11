@@ -7,7 +7,7 @@ echo ${GREEN}Enter name of project folder to be created:${NC}
 read -p "${PWD}/" foo
 mkdir "$foo" && cd "$foo"
 git clone --depth=1 git@github.com:roots/trellis.git && rm -rf trellis/.git
-git clone --depth=1 git@github.com:roots/bedrock.git site && rm -rf site/.git
+composer create-project roots/bedrock site
 echo ${GREEN}Trellis and Bedrock installation complete.${NC}
 read -p $'\e[0;32mContinue and install Sage?\e[0m [\e[1;33mY,n\e[0m]? \e[0m' -r
 echo    # (optional) move to a new line
@@ -16,7 +16,7 @@ then
   cd site/web/app/themes
   echo ${GREEN}Enter name of theme folder to be created:${NC}
   read -p "site/web/app/themes/" bar
-  composer create-project roots/sage ${bar} dev-master
+  composer create-project roots/sage ${bar}
   cd ${bar}
   yarn && yarn build
 fi
